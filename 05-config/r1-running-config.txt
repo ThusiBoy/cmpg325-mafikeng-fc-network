@@ -1,0 +1,184 @@
+                  TYPE      MEMORY_REQ
+     Onboard devices &
+          buffer pools      0x022F6000
+-----------------------------------------------
+                TOTAL:      0x022F6000
+Rounded IOMEM up to: 36Mb.
+Using 6 percent iomem. [36Mb/512Mb]
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.1(4)M5, RELEASE SOFTWARE (fc2)Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2007 by Cisco Systems, Inc.
+Compiled Wed 18-Jul-07 04:52 by pt_team
+Image text-base: 0x2100F918, data-base: 0x24729040
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO2911/K9 (revision 1.0) with 491520K/32768K bytes of memory.
+Processor board ID FTX152400KS
+3 Gigabit Ethernet interfaces
+DRAM configuration is 64 bits wide with parity disabled.
+255K bytes of non-volatile configuration memory.
+249856K bytes of ATA System CompactFlash 0 (Read/Write)
+
+Press RETURN to get started!
+
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.10, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.20, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.30, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.40, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.50, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.60, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.99, changed state to up
+
+
+Router>enable
+Router#show running-config
+Building configuration...
+
+Current configuration : 1348 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2911/K9 sn FTX15240CX0-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 10.43.10.1 255.255.255.0
+!
+interface GigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 10.43.20.1 255.255.255.0
+!
+interface GigabitEthernet0/0.30
+ encapsulation dot1Q 30
+ ip address 10.43.30.1 255.255.255.0
+!
+interface GigabitEthernet0/0.40
+ encapsulation dot1Q 40
+ ip address 10.43.40.1 255.255.255.0
+!
+interface GigabitEthernet0/0.50
+ encapsulation dot1Q 50
+ ip address 10.43.50.1 255.255.255.0
+!
+interface GigabitEthernet0/0.60
+ encapsulation dot1Q 60
+ ip address 10.43.60.1 255.255.255.0
+!
+interface GigabitEthernet0/0.99
+ encapsulation dot1Q 99
+ ip address 10.43.99.1 255.255.255.0
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet0/2
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
